@@ -17,34 +17,34 @@
 # 8. Check it! Make an if else statement to see if guess equals the random number, if it does tell the user they won! If it does not, update the guess count number by 1
 # 9. Let the user know how many guesses it took.  Print a message using the guess count number - make sure it makes sense no matter what the number is
 # 10. Make the game playable more than once, add a while loop around all of your code
-# import random
+import random
 
-# boolean = True
-# while boolean:
-#   num = input ("Type a number for an upper bound: ")
-#   if num.isdigit():
-#     print("Let's play!")
-#     num = int(num)
-#     boolean = False
+name = input("Type Name")
+boolean = True
+while boolean:
+  minNum = input ("Type a number for a lower bound: ")
+  maxNum = input (str(name) + ", Type a number for an upper bound: ")
+  if maxNum.isdigit() & minNum.isdigit():
+    print("Let's play!")
+    upperBound = int(maxNum) 
+    lowerBound = int(minNum)
+    boolean = False
     
-#   else: 
-#     print("Not a digit")
-#   secret = random.randrange(0,num)
-#   guess = None
-#   count = 0
-# while guess != secret:
-#   guess = input("Type a number between 1 and " + str(num) + ":")
-#   if guess. isdigit():
-#     guess = int(guess)
-#     count +=1
-#   if guess == secret:
-#     print("You got it!")
-#   else: 
-#     print("Try again.")
-# if count == 1:
-#    print("It took you",count, "guess!")
-# else: 
-#   print("It took you", count, "guesses!")
-import random 
-
-print(random. range(1,50))
+  else: 
+    print("Not a digit")
+  secret = random.randrange(lowerBound,upperBound)
+  guess = None
+  count = 0
+while guess != secret:
+  guess = input("Type a number between" + str(lowerBound) + " and " + str(upperBound) + ":")
+  if guess. isdigit():
+    guess = int(guess)
+    count +=1
+  if guess == secret:
+    print("You got it!")
+  else: 
+    print("Try again.")
+if count == 1:
+   print("It took you",count, "guess!")
+else: 
+  print("It took you", count, "guesses!")
