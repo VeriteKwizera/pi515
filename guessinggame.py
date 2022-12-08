@@ -17,34 +17,48 @@
 # 8. Check it! Make an if else statement to see if guess equals the random number, if it does tell the user they won! If it does not, update the guess count number by 1
 # 9. Let the user know how many guesses it took.  Print a message using the guess count number - make sure it makes sense no matter what the number is
 # 10. Make the game playable more than once, add a while loop around all of your code
-import random
+# import random
 
-name = input("Type Name")
-boolean = True
-while boolean:
-  minNum = input ("Type a number for a lower bound: ")
-  maxNum = input (str(name) + ", Type a number for an upper bound: ")
-  if maxNum.isdigit() & minNum.isdigit():
-    print("Let's play!")
-    upperBound = int(maxNum) 
-    lowerBound = int(minNum)
-    boolean = False
+# name = input("Type Name")
+# boolean = True
+# while boolean:
+#   minNum = input ("Type a number for a lower bound: ")
+#   maxNum = input (str(name) + ", Type a number for an upper bound: ")
+#   if maxNum.isdigit() & minNum.isdigit():
+#     print("Let's play!")
+#     upperBound = int(maxNum) 
+#     lowerBound = int(minNum)
+#     boolean = False
     
-  else: 
-    print("Not a digit")
-  secret = random.randrange(lowerBound,upperBound)
-  guess = None
-  count = 0
-while guess != secret:
-  guess = input("Type a number between" + str(lowerBound) + " and " + str(upperBound) + ":")
-  if guess. isdigit():
-    guess = int(guess)
-    count +=1
-  if guess == secret:
-    print("You got it!")
-  else: 
-    print("Try again.")
-if count == 1:
-   print("It took you",count, "guess!")
-else: 
-  print("It took you", count, "guesses!")
+#   else: 
+#     print("Not a digit")
+#   secret = random.randrange(lowerBound,upperBound)
+#   guess = None
+#   count = 0
+# while guess != secret:
+#   guess = input("Type a number between" + str(lowerBound) + " and " + str(upperBound) + ":")
+#   if guess. isdigit():
+#     guess = int(guess)
+#     count +=1
+#   if guess == secret:
+#     print("You got it!")
+#   else: 
+#     print("Try again.")
+# if count == 1:
+#    print("It took you",count, "guess!")
+# else: 
+#   print("It took you", count, "guesses!")
+
+
+candyList = ["gummy bears", "sour patch", "m&m", "skittles"]
+    
+i = 1
+for candy in candyList:
+  if i == 3:
+    print (candy)
+    continue
+  i += 1
+
+
+
+
