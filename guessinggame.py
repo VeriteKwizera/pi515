@@ -19,7 +19,7 @@
 # 10. Make the game playable more than once, add a while loop around all of your code
 # import random
 
-# name = input("Type Name")
+# name = input("Type Name, ")
 # boolean = True
 # while boolean:
 #   minNum = input ("Type a number for a lower bound: ")
@@ -41,7 +41,7 @@
 #     guess = int(guess)
 #     count +=1
 #   if guess == secret:
-#     print("You got it!")
+#     print(f"{username} got it!")
 #   else: 
 #     print("Try again.")
 # if count == 1:
@@ -50,14 +50,54 @@
 #   print("It took you", count, "guesses!")
 
 
-candyList = ["gummy bears", "sour patch", "m&m", "skittles"]
+# candyList = ["gummy bears", "sour patch", "m&m", "skittles"]
     
-i = 1
-for candy in candyList:
-  if i == 3:
-    print (candy)
-    continue
-  i += 1
+# i = 1
+# for candy in candyList:
+#   if i == 3:
+#     print (candy)
+#     continue
+#   i += 1
+import random 
+
+
+username = input("Enter username: ")
+next_game = True
+while next_game is True:
+  
+  user_input = ""
+  list = ["rock", "paper", "scissors"]
+  computer = random.choice(list) 
+  print(computer)
+  while user_input not in list:
+    user_input = input ("Type, rock, paper or scissors: ").lower()
+  
+  if computer == user_input:
+    print("Draw")
+  elif user_input == "rock":
+    if computer == "paper":
+      print(f"{username} lost")
+    else:
+      print(f"{username} won!")
+  
+  elif user_input == "paper":
+    if computer == "scissors":
+        print(f"{username} lost")
+    else:
+        print(f"{username} won!")
+  
+  else:
+    if computer == "rock":
+        print(f"{username} lost")
+    else:
+        print(f"{username} won!")
+next_game_list = ["yes", "no"]  
+answer = input("Do you want to play again").lower()
+if answer == "yes": 
+  next_game = True
+else: 
+  next_game = False
+
 
 
 
