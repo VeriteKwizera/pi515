@@ -59,8 +59,9 @@
 #     continue
 #   i += 1
 import random 
-
-
+computer_count = 0
+user_input_count = 0
+count = 1
 username = input("Enter username: ")
 next_game = True
 while next_game is True:
@@ -77,28 +78,36 @@ while next_game is True:
   elif user_input == "rock":
     if computer == "paper":
       print(f"{username} lost")
+      computer_count +=1
     else:
       print(f"{username} won!")
+      user_input_count +=1
   
   elif user_input == "paper":
     if computer == "scissors":
         print(f"{username} lost")
+        computer_count += 1
     else:
         print(f"{username} won!")
+        user_input_count +=1
   
   else:
     if computer == "rock":
         print(f"{username} lost")
+        computer_count +=1
     else:
         print(f"{username} won!")
-next_game_list = ["yes", "no"]  
-answer = input("Do you want to play again").lower()
-if answer == "yes": 
-  next_game = True
-else: 
-  next_game = False
-
-
-
-
+        user_input_count +=1
+  # next_game_list = ["yes", "no"]  
+  # answer = input("Do you want to play again").lower()
+  # if answer == "yes": 
+  #   next_game = True
+  # else: 
+  #   next_game = False
+  print("computer count = " + str(computer_count)) 
+  print("user count" + str(user_input_count))
+  if computer_count <2 and user_input_count < 2:
+    next_game = True
+  else:
+    next_game = False
 
