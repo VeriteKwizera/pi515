@@ -69,7 +69,7 @@ while next_game is True:
   user_input = ""
   list = ["rock", "paper", "scissors"]
   computer = random.choice(list) 
-  print(computer)
+  # print(computer)
   while user_input not in list:
     user_input = input ("Type, rock, paper or scissors: ").lower()
   
